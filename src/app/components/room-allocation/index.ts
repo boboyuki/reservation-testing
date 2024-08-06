@@ -1,1 +1,1 @@
-export * from './room-allocation'
+export * from './room-allocation';
