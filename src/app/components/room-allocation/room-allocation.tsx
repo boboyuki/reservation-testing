@@ -77,7 +77,6 @@ export const RoomAllocation = ({ guest, rooms, onChange }: Props) => {
     if (type !== 'adult' && type !== 'child') {
       return;
     }
-    console.log(notAssignQuest[type], 'notAssignQuest[type]');
     // check decrease or increase or input
     const newRoomResult = roomResult.map((room, i) => {
       if (i === Number(index)) {
@@ -108,7 +107,6 @@ export const RoomAllocation = ({ guest, rooms, onChange }: Props) => {
       }
       return room;
     });
-    console.log('newRoomResult', newRoomResult);
 
     setRoomResult(newRoomResult);
   };
@@ -120,7 +118,7 @@ export const RoomAllocation = ({ guest, rooms, onChange }: Props) => {
   };
 
   useEffect(() => {
-    onChange(roomResult); //目前console.log 不影響若
+    onChange(roomResult); //目前console.log 不影響
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roomResult]);
 

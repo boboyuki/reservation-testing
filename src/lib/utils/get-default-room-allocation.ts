@@ -27,7 +27,6 @@ export const getDefaultRoomAllocation = (guest: Guest, rooms: Room[]): DefaultRo
       if (totalPrice < minTotalPrice) {
         minTotalPrice = totalPrice;
         bestAllocation = structuredClone(currentAllocation);
-        console.log('bestAllocation', bestAllocation);
       }
       return;
     }
@@ -45,7 +44,7 @@ export const getDefaultRoomAllocation = (guest: Guest, rooms: Room[]): DefaultRo
           child: children,
           price: room.roomPrice + adults * room.adultPrice + children * room.childPrice,
         };
-        
+
         allocate(
           { adult: remainingGuests.adult - adults, child: remainingGuests.child - children },
           [...currentAllocation, newRoom],

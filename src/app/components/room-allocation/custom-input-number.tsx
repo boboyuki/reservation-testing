@@ -28,7 +28,6 @@ export const CustomInputNumber = ({
 }: Props) => {
   const handleIncreaseButton = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const newValue = value + step;
-    console.log(newValue, max);
     if (newValue > max) {
       return;
     }
@@ -37,7 +36,6 @@ export const CustomInputNumber = ({
 
   const handleDecreaseButton = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const newValue = value - step;
-    console.log(newValue, min);
     if (newValue < min) {
       return;
     }
